@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { Link } from "react-router-dom";
 
 const MyPostedJobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -24,7 +25,8 @@ const MyPostedJobs = () => {
               <th>Job Title</th>
               <th>Job Deadline</th>
               <th>Application Count</th>
-              <th>MY Favourite</th>
+              <th>View Application</th>
+             
             </tr>
           </thead>
           <tbody>
@@ -35,6 +37,11 @@ const MyPostedJobs = () => {
                 <td>{job.title}</td>
                 <td>{job.applicationDeadline}</td>
                 <td>{job.applicationCount}</td>
+                <Link to={`/viewApplications/${job._id}`}>
+                <td>
+                <button className="btn btn-link">View Applications</button>
+              </td>
+                </Link>
                
               </tr>)
          }
