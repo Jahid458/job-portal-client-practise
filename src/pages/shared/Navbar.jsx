@@ -11,7 +11,7 @@ const Navbar = () => {
       console.log('Successfully Sign Out');
     })
     .catch(error => {
-      console.log("FAiled to sign out Stay donot leave mne alonbe ");
+      console.log("FAiled to sign out Stay donot leave me alone ",error);
     })
   }
   const links = (
@@ -19,6 +19,7 @@ const Navbar = () => {
       <li><NavLink to="/">Home</NavLink></li>
       <li><NavLink to="/myApplications">MyApplications</NavLink></li>
       <li><NavLink to="/addjob">Add Job</NavLink></li>
+      <li><NavLink to="/mypostedjob">Posted Job</NavLink></li>
      
     </>
   );
