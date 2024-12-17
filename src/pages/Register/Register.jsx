@@ -8,6 +8,7 @@ import SocialLogin from '../shared/SocialLogin';
 const Register = () => {
 
     const {createUser} = useContext(AuthContext)
+    
 
      const handleregister = e => {
         e.preventDefault(); 
